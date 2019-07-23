@@ -14,18 +14,18 @@ data class Register (
     var name:String,
     var nickname:String,
     var gender:String,
-    var birthday:String
+    var birth_date:String
 )
 interface PLNWService {
     @FormUrlEncoded
-    @POST("/user/register")
+    @POST("/user/register/")
     //BaseUrl 뒤에 들어가는 register 기능 페이지
-    fun RegisterRequest(@Field("Email")email: String,
-                        @Field("Username")username: String,
-                        @Field("Password1")password1: String,
-                        @Field("Password2")password2: String,
-                        @Field("Name")name: String,
-                        @Field("Nickname")nickname: String,
-                        @Field("Gender")gender: String,
-                        @Field("Birth date")birthday: String):Call<Register>
+    fun RegisterRequest(@Field("email")email: String,
+                        @Field("username")username: String,
+                        @Field("password1")password1: String,
+                        @Field("password2")password2: String,
+                        @Field("name")name: String,
+                        @Field("nickname")nickname: String,
+                        @Field("gender")gender: String,
+                        @Field("birth_date")birth_date: String):Call<Register>
 }
