@@ -13,7 +13,7 @@
         <TextView
                 android:text="Register"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/register" android:textSize="36sp"/>
+                android:layout_height="wrap_content" android:id="@+id/Login" android:textSize="36sp"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

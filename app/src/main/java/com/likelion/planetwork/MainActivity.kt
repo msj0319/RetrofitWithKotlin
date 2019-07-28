@@ -48,18 +48,16 @@ class MainActivity : AppCompatActivity() {
                                     nickname.text.toString(),
                                     genderChecked.text.toString(),
                                     birthday.text.toString()).enqueue(object : Callback<Register>{
+
                 //서버와 통신에 실패했을 때.
                 override fun onFailure(call: Call<Register>, t: Throwable) {
-                    Log.e("서버와 통신에 실패했습니다.","Error!")
                 }
                 override fun onResponse(call: Call<Register>, response: Response<Register>) {
                     println(response?.body().toString())
-                    Log.e("서버와 통신 성공!","Success")
                 }
             })
         }
-
-        val intent = Intent(this, MessageActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
         finish()
     }
