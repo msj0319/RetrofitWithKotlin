@@ -35,4 +35,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     //API 인터페이스를 호출 가능한 객체로 바꿔주는 Converter
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    
+    //개발 편의를 위한 Anko 라이브러리 추가
+    implementation "org.jetbrains.anko:anko:0.10.8"
 }

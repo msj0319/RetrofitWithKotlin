@@ -1,14 +1,12 @@
 package com.likelion.planetwork
 
 import retrofit2.Call
+import retrofit2.http.*
 import retrofit2.http.Body
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
 
 //회원가입을 위한 data class 작성
 data class Register (
-    var id:String?=null, //회원정보를 불러오기 위한 primary key값.
+    var pk:Int?=null, //회원정보를 불러오기 위한 primary key값.
     var email:String?=null,
     var username:String?=null,
     var password1:String?=null,
@@ -46,5 +44,9 @@ interface PLNWService {
     @POST("/user/login/")
     fun LoginRequest(@Field("username")username: String,
                      @Field("password")password1: String):Call<LoginForm>
+
+    //회원정보 받아오기
+    @GET("/user/<int:pk>")
+    fun UserInfo(@Path("pk")pk:Int):Call<Register>
     
 }

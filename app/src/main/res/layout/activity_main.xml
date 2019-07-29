@@ -5,80 +5,14 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <TextView
-                android:text="Register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/Login" android:textSize="36sp"/>
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:id="@+id/emailText" android:hint="이메일을 입력하세요"/>
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/username" android:hint="사용할 아이디 입력"/>
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/password" android:hint="사용할 비밀번호 입력"/>
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/repassword" android:hint="사용할 비밀번호를 한 번 더 입력하세요"/>
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/nameText" android:hint="사용자의 이름 입력"/>
-        <TextView
-                android:text="성별 체크"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView" android:textSize="24sp"/>
-        <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/gender">
-            <RadioButton
-                    android:text="Male"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/Male" android:layout_weight="1"/>
-            <RadioButton
-                    android:text="Female"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/Female" android:layout_weight="1"/>
-        </RadioGroup>
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/genderChecked" android:textSize="24sp"
-                android:hint="체크한 성별"/>
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/nickname" android:hint="사용할 닉네임 입력"/>
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="date"
-                android:ems="10"
-                android:id="@+id/birthday" android:hint="YYYY-MM-DD 로 생년월일 입력"/>
-        <Button
-                android:text="제출하기"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/Submit"/>
-    </LinearLayout>
+        tools:context=".RegisterActivity">
+
+    <Button
+            android:text="로그인하기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/goLogin" android:layout_weight="1"/>
+    <Button
+            android:text="회원가입하기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/goRegister" android:layout_weight="1"/>
 </LinearLayout>
