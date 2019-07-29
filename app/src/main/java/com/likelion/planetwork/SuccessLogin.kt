@@ -39,7 +39,7 @@ class SuccessLogin(activity : Activity) {
                     if (response?.code() == 200) {
                         //Toast.makeText(this@LoginActivity, "로그인에 성공했습니다.", Toast.LENGTH_SHORT).show()
                         activity.toast("로그인에 성공했습니다")
-                        signedin = response?.body()?.user?.id!!.toInt()
+                        signedin = response?.body()?.user?.pk!!.toInt()
                         activity.finish()
                     }
                 }
@@ -47,7 +47,7 @@ class SuccessLogin(activity : Activity) {
     }
     
     //회원 pk 가져오기
-    fun getUserID(id: Int) {
+    fun getUserID(pk: Int) {
         server.UserInfo(signedin).enqueue(object : Callback<Register> {
             override fun onFailure(call: Call<Register>, t: Throwable) {
                 Log.e("서버와 통신에 실패했습니다.", "Error!")

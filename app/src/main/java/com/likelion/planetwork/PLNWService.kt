@@ -18,8 +18,8 @@ data class Register (
 )
 
 data class Body (
-    var username: String,
-    var id: String
+    var username: String?=null,
+    var pk: Int?=null
 )
 data class LoginForm (
     var user: com.likelion.planetwork.Body
